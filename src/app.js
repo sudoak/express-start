@@ -3,6 +3,7 @@ var bscrypt = require('bcrypt-nodejs')
 var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser')
 var passport = require('passport')
+var favicon = require('serve-favicon')
 var session = require('express-session')
 var path = require('path')
 var logger = require('morgan')
@@ -25,6 +26,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, '/public')))
+app.use(favicon(__dirname + '/public/favicon.ico'))
 
 app.use(session({
     secret: 'soSecret(*&^&^%$%$#ftatdju2907nm88)',

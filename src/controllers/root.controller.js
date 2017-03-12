@@ -7,9 +7,10 @@ var rootController = function () {
         next()
     }
     var getIndex = function (req, res) {
-        rs.getData(null,(err,dat)=>{
+        /*rs.getData(null,(err,dat)=>{
             res.json(dat)
-        })
+        })*/
+        res.render('xcv')
     }
     return { getIndex: getIndex}
 }
